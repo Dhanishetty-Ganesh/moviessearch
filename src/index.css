@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.moviesearch-app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: lightblue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.moviesearch-title {
+  color: darkblue;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.moviesearch-form {
+  margin-bottom: 20px;
+}
+
+.moviesearch-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moviesearch-input-card {
+  background-color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-radius: 4px;
+  align-content: center;
+}
+
+.moviesearch-input {
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+}
+
+.moviesearch-icon {
+  font-size: 19px;
+  color: #757575;
+  margin-top: 10px;
+  padding-left: 8px;
+  padding-right: 0px;
+}
+
+.moviesearch-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.moviesearch-loading {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(195, 195, 195, 0.6);
+  border-radius: 50%;
+  border-top-color: #007BFF;
+  border-right-color: #636767;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.moviesearch-error {
+  color: red;
+}
+
+.moviesearch-input-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.moviesearch-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.moviesearch-movie-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px; /* Adjusted width to accommodate padding and maintain equal size */
+  height: 300px; /* Fixed height */
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moviesearch-dog-image {
+  width: 100%;
+  height: 150px; /* Fixed height for images */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.moviesearch-movie-title {
+  color: darkblue;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.moviesearch-movie-author {
+  color: green;
+  text-align: center;
+}
+
+.moviesearch-movie-year {
+  color: gray;
+  text-align: center;
 }

@@ -1,38 +1,188 @@
-.App {
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App container */
+.moviesearch-app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  min-height: 100vh; /* Ensures full viewport height */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title and welcome message */
+.moviesearch-title {
+  color: darkblue;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.moviesearch-welcome {
+  color: rgb(139, 63, 0);
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+/* Form and input container */
+.moviesearch-form {
+  margin-bottom: 20px;
+}
+
+.moviesearch-input-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.moviesearch-input-card {
+  background-color: white; 
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-radius: 4px;
+  align-content: center;
+}
+
+/* Input and icons */
+.moviesearch-input {
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 180px;
+}
+
+.moviesearch-icon {
+  font-size: 22px;
+  color: #757575;
+  margin-top: 10px;
+  padding-left: 8px;
+  padding-right: 0px;
+}
+
+.moviesearch-close-icon {
+  font-size: 22px;
+  color: #757575;
+  cursor: pointer;
+  margin-top: 10px;
+  padding-right: 8px;
+}
+
+.moviesearch-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: darkblue;
   color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Loading spinner */
+.moviesearch-loading {
+  display: inline-block;
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(195, 195, 195, 0.6);
+  border-radius: 50%;
+  border-top-color: #007BFF; /* Blue color */
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+/* Error messages */
+.moviesearch-error {
+  color: red;
+}
+
+.moviesearch-input-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Movies container */
+.moviesearch-movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Movie card */
+.moviesearch-movie-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 250px; /* Adjusted width to accommodate padding and maintain equal size */
+  height: 310px; /* Fixed height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start for all device sizes */
+}
+
+/* Dog image */
+.moviesearch-dog-image {
+  width: 100%;
+  height: 150px; /* Fixed height for images */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px; /* Added margin-bottom for spacing */
+}
+
+/* Movie details */
+.moviesearch-movie-title {
+  color: darkblue;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 5px; /* Added margin-bottom for spacing */
+}
+
+.moviesearch-movie-author {
+  color: green;
+  text-align: left;
+  margin-bottom: 5px; /* Added margin-bottom for spacing */
+}
+
+.moviesearch-movie-year {
+  color: coral;
+}
+
+.movie-details-span {
+  color: rgba(0, 0, 0, 0.715);
+  font-weight: bold;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .moviesearch-movie-card {
+    width: 100%;
+    max-width: none;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .moviesearch-dog-image {
+    height: auto;
   }
 }
