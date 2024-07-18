@@ -1,23 +1,20 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* App container */
 .moviesearch-app {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: lightblue;
-  min-height: 100vh; /* Ensures full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* Title and welcome message */
 .moviesearch-title {
   color: darkblue;
   font-size: 2em;
@@ -31,7 +28,6 @@
   margin-top: 20px;
 }
 
-/* Form and input container */
 .moviesearch-form {
   margin-bottom: 20px;
 }
@@ -52,7 +48,6 @@
   align-content: center;
 }
 
-/* Input and icons */
 .moviesearch-input {
   outline: none;
   border: none;
@@ -88,7 +83,6 @@
   margin-left: 10px;
 }
 
-/* Loading spinner */
 .moviesearch-loading {
   display: inline-block;
   margin: 20px;
@@ -96,7 +90,7 @@
   height: 40px;
   border: 3px solid rgba(195, 195, 195, 0.6);
   border-radius: 50%;
-  border-top-color: #007BFF; /* Blue color */
+  border-top-color: #007BFF;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }
@@ -109,7 +103,6 @@
   to { -webkit-transform: rotate(360deg); }
 }
 
-/* Error messages */
 .moviesearch-error {
   color: red;
 }
@@ -119,7 +112,6 @@
   margin-top: 10px;
 }
 
-/* Movies container */
 .moviesearch-movies {
   display: flex;
   flex-wrap: wrap;
@@ -127,42 +119,39 @@
   gap: 20px;
 }
 
-/* Movie card */
 .moviesearch-movie-card {
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
   width: 100%;
-  max-width: 250px; /* Adjusted width to accommodate padding and maintain equal size */
-  height: 310px; /* Fixed height */
+  max-width: 250px; 
+  height: 310px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start for all device sizes */
+  align-items: flex-start; 
 }
 
-/* Dog image */
 .moviesearch-dog-image {
   width: 100%;
-  height: 150px; /* Fixed height for images */
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px; /* Added margin-bottom for spacing */
+  margin-bottom: 10px;
 }
 
-/* Movie details */
 .moviesearch-movie-title {
   color: darkblue;
   text-align: left;
   font-size: 16px;
-  margin-bottom: 5px; /* Added margin-bottom for spacing */
+  margin-bottom: 5px;
 }
 
 .moviesearch-movie-author {
   color: green;
   text-align: left;
-  margin-bottom: 5px; /* Added margin-bottom for spacing */
+  margin-bottom: 5px;
 }
 
 .moviesearch-movie-year {
@@ -174,7 +163,6 @@
   font-weight: bold;
 }
 
-/* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .moviesearch-movie-card {
     width: 100%;
